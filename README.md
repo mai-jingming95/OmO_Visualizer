@@ -69,6 +69,16 @@
 
 ## 🚀 快速开始
 
+### 从GitHub下载
+
+```bash
+# 克隆仓库
+git clone https://github.com/mai-jingming95/OmO_Visualizer.git
+
+# 进入项目目录
+cd OmO_Visualizer
+```
+
 ### 安装依赖
 ```bash
 npm install
