@@ -69,6 +69,16 @@ Despite being a demonstration tool, it provides real value in the following scen
 
 ## 🚀 Quick Start
 
+### Download from GitHub
+
+```bash
+# Clone the repository
+git clone https://github.com/mai-jingming95/OmO_Visualizer.git
+
+# Navigate to project directory
+cd OmO_Visualizer
+```
+
 ### Install Dependencies
 ```bash
 npm install
