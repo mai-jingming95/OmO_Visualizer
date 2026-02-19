@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMO Visualizer - Oh My Opencode Agent Team</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+</head>
+<body>
+  <!-- 3D Scene Container -->
+  <div id="scene-container"></div>
+  
+  <!-- UI Overlay -->
+  <div id="ui-overlay">
+    <!-- Header -->
+    <div id="header">
+      <div class="logo">
+        <span class="logo-icon">🎯</span>
+        <span class="logo-text">OMO Visualizer</span>
+      </div>
+      <div class="status">
+        <span id="connection-status" class="status-dot"></span>
+        <span id="agent-count">0 Agents</span>
+        <span id="fps-counter">-- FPS</span>
+      </div>
+    </div>
+    
+    <!-- Primary View: Agent Overview Panel -->
+    <div id="agent-overview" class="panel">
+      <div class="panel-header">
+        <span>🤖 Agent Team</span>
+        <button id="toggle-overview" class="toggle-btn">−</button>
+      </div>
+      <div id="agent-list" class="agent-list">
+        <!-- Agents will be dynamically added here -->
+        <div class="empty-state">等待Agent活动...</div>
+      </div>
+    </div>
+    
+    <!-- Activity Feed -->
+    <div id="activity-feed" class="panel">
+      <div class="panel-header">
+        <span>📊 Activity Feed</span>
+        <button id="clear-feed" class="clear-btn">Clear</button>
+      </div>
+      <div id="activity-list" class="activity-list">
+        <!-- Activities will be dynamically added here -->
+      </div>
+    </div>
+    
+    <!-- Legend -->
+    <div id="legend" class="panel mini">
+      <div class="legend-items">
+        <div class="legend-item"><span class="dot" style="background:#3b82f6"></span>Sisyphus</div>
+        <div class="legend-item"><span class="dot" style="background:#10b981"></span>Metis</div>
+        <div class="legend-item"><span class="dot" style="background:#f59e0b"></span>Prometheus</div>
+        <div class="legend-item"><span class="dot" style="background:#6366f1"></span>Oracle</div>
+        <div class="legend-item"><span class="dot" style="background:#22d3ee"></span>Explore</div>
+        <div class="legend-item"><span class="dot" style="background:#14b8a6"></span>Librarian</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Secondary View: Agent Detail Modal -->
+  <div id="agent-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="agent-info">
+          <span id="modal-agent-icon" class="agent-icon">🤖</span>
+          <div class="agent-title">
+            <h2 id="modal-agent-name">Agent Name</h2>
+            <span id="modal-agent-role">Role</span>
+          </div>
+        </div>
+        <button id="close-modal" class="close-btn">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="session-timeline">
+          <h3>📜 Session Timeline</h3>
+          <div id="session-log" class="log-container">
+            <!-- Session logs will be added here -->
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value" id="stat-files">0</span>
+            <span class="stat-label">Files Touched</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-tokens">0</span>
+            <span class="stat-label">Tokens Used</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-subagents">0</span>
+            <span class="stat-label">Subagents</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-duration">0s</span>
+            <span class="stat-label">Duration</span>
+          </div>
+        </div>
+        <div class="files-section">
+          <h3>📁 Files Touched</h3>
+          <div id="files-list" class="files-list">
+            <!-- Files will be added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Controls Help -->
+  <div id="controls-help" class="panel mini">
+    <div class="controls-list">
+      <span><kbd>Click</kbd> Agent for details</span>
+      <span><kbd>Drag</kbd> Rotate view</span>
+      <span><kbd>Scroll</kbd> Zoom</span>
+      <span><kbd>M</kbd> Toggle audio</span>
+    </div>
+  </div>
+  
+  <!-- Audio Toggle -->
+  <button id="audio-toggle" class="audio-btn">🔊</button>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
