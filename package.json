@@ -1,0 +1,21 @@
+{
+  "name": "omo-visualizer",
+  "version": "1.0.0",
+  "description": "Real-time visualization of Oh My Opencode Agent team collaboration",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "build": "npm run build:client",
+    "build:client": "echo 'Client built'"
+  },
+  "keywords": ["opencode", "agent", "visualization", "three.js", "websocket"],
+  "author": "Sisyphus",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.16.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {}
+}
