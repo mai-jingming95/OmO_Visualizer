@@ -10,6 +10,18 @@ Inspired by [vibecraft](https://github.com/Nearcyan/vibecraft), this tool provid
 ![WebSocket](https://img.shields.io/badge/WebSocket-Real--time-green)
 ![Tone.js](https://img.shields.io/badge/Tone.js-Audio-orange)
 
+## 📸 Screenshots
+
+### Feature Implementation Scenario
+Multiple Agents collaborating on a feature implementation task: Sisyphus as the main orchestrator, Metis analyzing requirements, Explore searching the codebase, Librarian researching JWT security, and Prometheus creating the implementation plan.
+
+![Feature Implementation](./screenshots/screenshot-1-feature-implementation.png)
+
+### Architecture Decision Scenario
+Sisyphus consulting Oracle for caching architecture design, with multiple Librarians researching Redis and CDN caching solutions in parallel, demonstrating the collaborative process for complex architecture decisions.
+
+![Architecture Decision](./screenshots/screenshot-2-architecture-decision.png)
+
 ## ✨ Features
 
 ### 🎮 Primary Interface - Agent Overview Panel

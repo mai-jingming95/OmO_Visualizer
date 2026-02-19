@@ -10,6 +10,18 @@
 ![WebSocket](https://img.shields.io/badge/WebSocket-Real--time-green)
 ![Tone.js](https://img.shields.io/badge/Tone.js-Audio-orange)
 
+## 📸 界面展示
+
+### 功能实现场景
+多个Agent协作完成功能实现任务，Sisyphus作为主协调者，Metis进行需求分析，Explore搜索代码库，Librarian研究JWT安全，Prometheus制定实施计划。
+
+![功能实现场景](./screenshots/screenshot-1-feature-implementation.png)
+
+### 架构决策场景
+Sisyphus咨询Oracle进行缓存架构设计，多个Librarian并行研究Redis和CDN缓存方案，展示复杂架构决策的协作过程。
+
+![架构决策场景](./screenshots/screenshot-2-architecture-decision.png)
+
 ## ✨ 功能特性
 
 ### 🎮 一级界面 - Agent概览面板
